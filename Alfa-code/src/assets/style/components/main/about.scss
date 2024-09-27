@@ -1,0 +1,102 @@
+// @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// 0d6efd
+// 3A37EB
+// 111A2E
+// fff
+// 000000
+
+$primary: #0d6efd;
+$secondary: #3A37EB;
+$dark: #111A2E;
+$text-1: #fff;
+$text-2: #000000;
+
+.about{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    &-container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        margin-top: 70px;
+        width: 100%;
+        @media screen and (max-width:990px){
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+    }
+    &__image{
+        width: 55%; 
+        height: 500px;
+        overflow: hidden;
+        border-radius: 22px;
+        object-fit: contain;
+        @media screen and (max-width:990px){    
+            width: 100%;
+            height: 100%; 
+        }
+    }
+    &-content{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        padding: 3% 0;
+        gap: 25px;
+        @media screen and (max-width:990px){
+            width: 100%;
+        }
+        &__header{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            @media screen and (max-width:990px){
+                gap: 5px;
+            }
+        }
+        &__link{
+        color: $secondary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19px; /* 118.75% */
+        font-family: Comfortaa;
+        }
+        &__title{
+            color: #1C2539;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px; /* 112.5% */
+            @media screen and (max-width:990px){
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+        &__desc{
+            color: #6F737B;
+            width: 100%;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px; /* 162.5% */
+        }
+        &__button{
+            width: 113.92px;
+            height: 55px;
+            flex-shrink: 0;
+            color: $text-1;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 19px; /* 118.75% */
+            background-color: $primary;
+            border-radius: 6px;
+            border-color: transparent;
+        }
+    }
+}

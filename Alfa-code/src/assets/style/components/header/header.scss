@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+// 0d6efd
+// 3A37EB
+// 111A2E
+// fff
+// 000000
+
+$primary: #0d6efd;
+$secondary: #3A37EB;
+$dark: #111A2E;
+$text-1: #fff;
+$text-2: #000000;
+
+.header{
+    position: relative;
+    margin: 0 auto 0 auto;
+    &-container{
+        flex-direction: row;
+        height: 50px;
+        z-index: 50;
+        backdrop-filter: blur(25px);
+    }
+    &__navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        position: fixed;
+        transform: translateX(-20px);
+    }
+    &-navbar{
+        &__logo{
+            width: 180px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+            @media screen and (max-width:600px){
+                width: 120px;
+                height: 60px;
+            } 
+            @media screen and (max-width:420px){
+                display: none;
+            }
+        }
+            &__logo-mini{
+                display: none;
+                width: 45px;
+                height: 35px;
+                @media screen and (max-width:420px){
+                    display: block;
+                }
+            }
+        &__menu{
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            @media screen and (max-width: 1140px){
+                gap: 20px;
+            }
+            @media screen and (max-width: 1080px){
+                gap: 16px;
+            }
+            @media screen and (max-width: 990px){
+                display: none;
+            }
+        }  
+        &__button{
+            width: 219.35px;
+            height: 55px;
+            flex-shrink: 0;
+            border-radius: 14px;
+            background: $text-1;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; 
+            transition: all 300ms ease-in-out;
+            @media screen and (max-width:520px){
+                width: 180px;
+                height: 40px;
+            }
+        }   
+        // &__button:hover{ 
+        //     background-color:$secondary;
+        //     color: $text-1;
+        //     .navbar-button__num{
+        //         color: $text-1;  
+        //     }
+        // }
+        &__buttons{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 10px;
+        }
+    }
+    .navbar-menu{
+        &__link{
+            color: $dark;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px; /* 162.5% */
+            cursor: pointer;
+            @media screen and (max-width: 1020px){
+                font-size: 14px;
+            }
+        }
+        &__link:hover{
+            color: $primary;
+            transition: all 300ms ease-in-out;
+        } 
+    }
+        .navbar-button{
+            &__num{
+                color: $secondary;
+                font-family: Comfortaa;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 19px; /* 118.75% */
+                transition: all 300ms ease-in-out;
+            }
+            &__icon{
+                transition: all 300ms ease-in-out;
+            }
+        }
+
+    &__burger{
+        padding: 18px;
+        height: 55px;
+        border-radius: 14px;
+        background: $text-1;
+        border: none;
+        transition: all 300ms ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        @media screen and (max-width:990px){
+            display: flex;
+        }
+        @media screen and (max-width:520px){
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__burger:hover{ 
+            background-color:$secondary;
+            .navbar-button__num{
+                color: $text-1;  
+            }
+            .header__burger svg{
+                fill: $text-1;
+            }
+    }
+    .icon{
+        fill: $text-1;
+    }
+}

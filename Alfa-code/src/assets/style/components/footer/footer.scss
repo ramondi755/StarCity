@@ -1,0 +1,68 @@
+// 0d6efd
+// 3A37EB
+// 111A2E
+// fff
+// 000000
+
+$primary: #0d6efd;
+$secondary: #3A37EB;
+$dark: #111A2E;
+$text-1: #fff;
+$text-2: #000000;
+
+.footer{
+    background: #0A101F;
+    color: $text-1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 90px;
+    margin-top: 130px;
+    height: 200px;
+    &-container{
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        &__right{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 10px;
+            padding: 20px 0;
+            @media screen and (max-width:600px){
+                gap: 10px;
+                padding: 10px;
+            }
+        }
+        &__link{
+            display: flex;
+            align-items: center;
+            height: 30px;
+            cursor: pointer;
+        }
+        &__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        &__logo-body{
+                width: 180px;
+                height: 60px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;   
+                @media screen and (max-width:600px){
+                    width: 120px;
+                    height: 50px;
+                }  
+            }
+            &__icons{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
